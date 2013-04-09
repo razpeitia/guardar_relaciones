@@ -1,0 +1,14 @@
+<html>
+<head>
+	<title> Registro</title>
+</head>
+<body>
+	<h1> Registro ...</h1>
+	<form method="post" action=".">
+		{% csrf_token %}
+		{{ infobasica.as_p }}
+		{{ gp.as_p }}
+		<p><input type="submit" value="Guardar" /></p>
+	</form>
+</body>
+</html>
