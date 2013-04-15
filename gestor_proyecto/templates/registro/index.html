@@ -1,14 +1,233 @@
-<html>
-<head>
-	<title> Registro</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block titulo %} Registro de Proyecto {% endblock titulo %}
+{% block contenido %}
 	<h1> Registro ...</h1>
-	<form method="post" action=".">
+		<form method="post" action=".">
 		{% csrf_token %}
-		{{ infobasica.as_p }}
+		<h5> 1. IDENTIFICACIÓN </h5>
+		<p>
+			<label for="id_nombre">Nombre del Proyecto:</label>
+			{{ infobasica.nombre }}
+		</p>
+		<p>
+			<label for="id_codigo">Código Proyecto: </label>
+			{{ infobasica.codigo}}
+		</p>
+		<p>
+			<label for="id_entidad"> Entidad - Dependencia:</label>
+			{{ infobasica.entidad}}
+		</p>
+		<p>
+			<label for ="id_jefe">Titular - Jefe:</label>
+			{{ infobasica.jefe}}
+		</p>
+		<h5> 2. CLASIFICACIÓN PED 2009-2015 </h5>
+		<p>
+			<label for="id_plan">Plan - Programa:</label>
+			{{ infobasica.plan }}
+		</p>
+		<p>
+			<label for="id_eje">Eje rector:</label>
+			{{ infobasica.eje }}
+		</p>
+		<p>
+			<label for="id_estrategia">Estrategia:</label>
+			{{ infobasica.estrategia }}
+		</p>
+		<p>
+			<label for="id_compromiso">Número de compromiso:</label>
+			{{ infobasica.compromiso }}
+		</p>
+		<h5> 4. AVANCE EN LA ELABORACIÓN </h5>
+		<p>
+			<label for="id_idea">Idea:</label>
+			{{ infobasica.idea }}
+		</p>
+		<p>
+			<label for="id_perfil">Perfil:</label>
+			{{ infobasica.perfil }}
+		</p>
+		<p>
+			<label for="id_prefactibilidad">Prefactibilidad:</label>
+			{{ infobasica.prefactibilidad }}
+		</p>
+		<p>
+			<label for="id_factibilidad" > Factibilidad: </label>
+			{{ infobasica.factibilidad }}
+		</p>
+		<p>
+			<label for="id_disenio"> Diseño: </label>
+			{{ infobasica.disenio }}
+		</p>
+		<p>
+			<label for="id_ejecucion"> Ejecución: </label>
+			{{ infobasica.ejecucion }}
+		</p>
+		<p>
+			<label for="id_pejecutivo"> Proyecto ejecutivo: </label>
+			{{ infobasica.pejecutivo }}
+		</p>
+		<p>
+			<label for="id_costo_beneficio"> Evaluacion Costo - Beneficio: </label>
+			{{ infobasica.costo_beneficio }}
+		</p>
+		<p>
+			<label for="id_impacto_ambiental"> Manifiesto de Impacto Ambiental: </label>
+			{{ infobasica.impacto_ambiental }}
+		</p>
+		<h5> 5. SITUACIÓN ACTUAL Y PROBLEMATICA </h5>
+		<p>
+			<label for ="id_situacion_problematica"> </label>
+			{{ infobasica.situacion_problematica }}
+		</p>
+		<h5>6. EL PROYECTO</h5>
+		<p>
+			<label for="id_objetivo"> Objetivo: </label>
+			{{ infobasica.objetivo }}
+		</p>
+		<p>
+			<label for="justificacion"> Justificacion: </label>
+			{{ infobasica.justificacion }}
+		</p>
+		<h5>7. METAS DEL PROYECTO</h5>
+		<p>
+			<label for="id_descripcion"> Descripcion: </label>
+			{{ infobasica.descripcion }}
+		</p>
+		<p>
+			<label for="id_beneficios"> Beneficios esperados:</label>
+			{{ infobasica.beneficios }}
+		</p>
+		<h5> 8. IMPORTANCIA DEL PROYECTO </h5>
+		<p>
+			<label for="id_prioridad">Prioridad para el Estado, Localidad o region:</label>
+			{{ infobasica.prioridad }}
+		</p>
+		<p>
+			<label for="id_estrategico"> Estrategico para el estado:</label>
+			{{ infobasica.estrategico }}
+		</p>
+		<p> 
+			<label for="id_beneficio_social"> De beneficio social: </label>
+			{{ infobasica.beneficio_social }}
+		</p>
+		<h5> 9. GRUPOS DE LA POBLACION OBJETIVO </h5>
+		<p>
+			<label for="id_numpersonas"> No. de personas que demandan el bien o el servicio </label>
+			{{ infobasica.numpersonas }}
+		</p>
+		<p>
+			<label for="id_numatender"> No. de personas que se propone atender </label>
+			{{ infobasica.numatender }}
+		</p>
+		<p>
+			<label for="id_descripcion_personas"> Descripcion de la poblacion a atender </label>
+			{{ infobasica.descripcion_personas }}
+		</p>
+		<h5> 10. NECESIDADES ACTUALES DEL PROYECTO </h5>
+		<p> 
+			<label for="id_inversionistas"> Inversionistas </label> 
+			{{ infobasica.inversionistas }}
+		</p>
+		<p>
+			<label for="id_socios"> Socios</label>
+			{{ infobasica.socios }}
+		</p>
+		<p>
+			<label for="id_permisos"> Permisos</label>
+			{{ infobasica.permisos}}
+		</p>
+		<p>
+			<label for="id_financiamiento"> Financiamiento </label>
+			{{ infobasica.financiamiento}}
+		</p>
+		<p>
+			<label for="id_comer"> Comercializacion </label>
+			{{ infobasica.comer }}
+		</p>
+		<p>
+			<label for="id_ga"> Gestión Administrativa </label>
+			{{ infobasica.ga }}
+		</p>
+		<p>
+			<label for="id_incentivos"> Incentivos </label>
+			{{ infobasica.incentivos }}
+		</p>
+		<p>
+			<label for="id_estudios"> Estudios </label>
+			{{ infobasica.estudios }}
+		</p>
+		<p>
+			<label for="id_antep"> Anteproyecto </label>
+			{{ infobasica.antep }}
+		</p>
+		<p>
+			<label for="id_otros"> Otros </label>
+			{{ infobasica.otros }}
+		</p>
+		<h5> 11. PRIORIDAD DEL PROYECTO </h5>
+		<p>
+			<label for="id_impacto"> Impacto </label>
+			{{ infobasica.impacto }}
+		</p>
+		<p>
+			<label for="id_empleo"> Empleo </label>
+			{{ infobasica.empleo }}
+		</p>
+		<p>
+			<label for="id_arraigo"> Arraigo</label>
+			{{ infobasica.arraigo }}
+		</p>
+		<p>
+			<label for="id_apode"> Apoderamiento</label>
+			{{ infobasica.apode }}
+		</p>
+		<p>
+			<label for="id_deecono"> Derrama Economica </label>
+			{{ infobasica.deecono }}
+		</p>
+		<p>
+			<label for="id_creecono"> Crecimiento Economico </label>
+			{{ infobasica.creecono }}
+		</p>
+		<p>
+			<label for="id_ecade"> Encadenamiento Productivo </label>
+			{{ infobasica.ecade }}
+		</p>
+		<p>
+			<label for="id_infra"> Desarrollo de Infraestructura p/región</label>
+			{{ infobasica.infra }}
+		</p>
+		<p>
+			<label for="id_otrosprio"> Otros </label>
+			{{ infobasica.otrosprio }}
+		</p>	
+		<h5> 12. EVALUACIÓN FINANCIERA </h5>
+		{{ cale }}
+		{{ formset.management_form }}
+		
+		{% for form in formset %}
+    	{{ form.id }}
+        {{ form.non_field_errors }}
+        {{ form.errors }}
+    	<ul>
+    	{% for field in form.visible_fields %}
+            <li>{{ field.label_tag }}: {{ field }}</li>
+        {% endfor %}
+    	</ul>
+    {% endfor %}
+
+		{% comment %}
+		<table>
+			{% for form in formset %}
+			{{ form }}
+			{%endfor%}
+		</table>			
+		{% endcomment %}
+
+		<h5> Ubicación </h5>
 		{{ gp.as_p }}
-		<p><input type="submit" value="Guardar" /></p>
+		<p><input type="submit" value="Guardar" class="btn btn-primary"/></p>
 	</form>
-</body>
-</html>
+	
+{% endblock contenido%}
